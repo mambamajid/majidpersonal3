@@ -20,15 +20,21 @@
         .navbar-nav .nav-link {
             color: #00e6e6 !important; /* Neon Teal */
         }
-        
+
         /* Ensure Navbar Hover Effect Works */
         .navbar-nav .nav-link:hover {
             color: #ffffff !important; /* White on hover */
         }
 
+        /* Center Navbar Toggler (Fixes Off-Center Issue) */
+        .navbar-toggler {
+            text-align: center;
+            width: 100%;
+        }
+
         /* Resize Education Image */
         .education-image img {
-            max-width: 50%; /* Adjust this to control size */
+            max-width: 50%;
             height: auto;
             border-radius: 10px;
             box-shadow: 0px 0px 15px rgba(0, 230, 230, 0.5);
@@ -41,17 +47,10 @@
             box-shadow: 0px 0px 10px rgba(0, 230, 230, 0.5);
         }
 
-        /* Cyberpunk Button */
-        .cyberpunk-btn {
-            background-color: #00e6e6;
-            color: #002244;
-            border: none;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .cyberpunk-btn:hover {
-            background-color: #ff0099;
-            box-shadow: 0px 0px 15px #ff0099;
+        /* Ensure h2 Stays Pink on Mobile */
+        h2 {
+            color: #ff0099 !important;
+            text-shadow: 2px 2px 10px rgba(255, 0, 153, 0.8);
         }
     </style>
 </head>
@@ -62,7 +61,7 @@
     <h1 class="fw-bold text-glow">Majid's Profile Page</h1>
 </header>
 
-<!-- Navbar (Now with Teal Font) -->
+<!-- Navbar (Now with Teal Font & Centered Toggler) -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -106,8 +105,8 @@
     <p>I do not have formal work experience yet, but I have created games using p5.js.</p>
 </section>
 
-<!-- Programming Skills -->
-<section id="programming-skills" class="container text-center mt-5">
+<!-- Programming Skills (Fixed Background Issue) -->
+<section id="programming-skills" class="container text-center mt-5 cyberpunk-bg">
     <h2 class="text-neon">Programming Skills</h2>
     <ul class="list-group mx-auto cyberpunk-list">
         <li class="list-group-item cyberpunk-list">Java - Intermediate</li>
@@ -134,8 +133,8 @@
     </div>
 </section>
 
-<!-- Projects Section -->
-<section id="projects" class="container text-center mt-5">
+<!-- Projects Section (Fixed Background Issue) -->
+<section id="projects" class="container text-center mt-5 cyberpunk-bg">
     <h2 class="text-neon">My Projects</h2>
     <table class="table cyberpunk-table">
         <thead>
@@ -160,14 +159,6 @@
         <div class="mb-3">
             <label for="name" class="form-label">Name:</label>
             <input type="text" id="name" name="name" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email:</label>
-            <input type="email" id="email" name="email" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label for="message" class="form-label">Message:</label>
-            <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
         </div>
         <button type="submit" class="btn cyberpunk-btn w-100">Send</button>
     </form>
